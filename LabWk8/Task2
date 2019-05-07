@@ -1,0 +1,31 @@
+/*
+ * Task2.c
+ *
+ *  Created on: 6 May 2019
+ *      Author: Kate McAlpine
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
+
+void swap(int *a, int *b);
+
+int main() {
+	int *a, z = 3, *b, y = 6;
+	a = &z;
+	printf("%d\n", z);
+	b = &y;
+	printf("%d\n", y);
+	swap(a, b);
+	printf("%d\n", z);
+	printf("%d\n", y);
+	return 0;
+}
+
+void swap(int *a, int *b) {
+	int c;
+	c = *a;
+	*a = *b;
+	*b = c;
+}
+
